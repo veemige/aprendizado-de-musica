@@ -36,7 +36,7 @@ def extract_features(file_path):
             'spectral_centroid_std': np.std(spectral_centroid),
             'zero_crossing_rate_mean': np.mean(zero_crossing_rate),
             'zero_crossing_rate_std': np.std(zero_crossing_rate),
-            'tempo': tempo
+            'tempo': np.mean(tempo) # Garante que o tempo seja um número único
         }
         return features
 
